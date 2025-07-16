@@ -51,19 +51,10 @@ poetry run get-papers-list "covid vaccine" -f output.csv --debug
 
 🧪 Examples
 Search: AI in Medicine (print to console)
-bash
-Copy
-Edit
 poetry run get-papers-list "AI in medicine"
 Search: COVID Vaccine Papers (2024 onward; save to file)
-bash
-Copy
-Edit
 poetry run get-papers-list "covid vaccine AND 2024:3000[dp]" -f covid_2024.csv --debug
 Search: Cancer Immunotherapy
-bash
-Copy
-Edit
 poetry run get-papers-list "cancer immunotherapy" -f cancer.csv
 📄 Output Format (CSV)
 Columns in the generated CSV:
@@ -78,8 +69,7 @@ Company Affiliations	Affiliation strings flagged as industry (pharma, biotech, I
 Example Row:
 
 mathematica
-Copy
-Edit
+
 40663029,Responses of Kidney Transplant Recipients...,2025 Jul 15,Walter D Park; Sumi S Nair,Janssen Scientific Affairs LLC; Janssen Vaccines
 🧠 How Non-Academic Affiliations Are Detected
 We classify each affiliation string using simple keyword rules.
@@ -93,9 +83,7 @@ university, college, school, institute, center, hospital, department, medical sc
 ⚠️ This is a basic heuristic suitable for a take‑home exercise. Real data can be messy; see Future Enhancements below.
 
 🗂 Project Structure
-csharp
-Copy
-Edit
+
 pubmed-project/
 │
 ├── paper_finder/
@@ -110,24 +98,16 @@ pubmed-project/
 └── poetry.lock          # Locked dependency versions
 👩‍💻 Developer Notes
 Run Module Directly (quick test)
-bash
-Copy
-Edit
+
 poetry run python paper_finder/core.py
 Run CLI (recommended)
-bash
-Copy
-Edit
+
 poetry run get-papers-list "covid vaccine" -f results.csv --debug
 Change Query (just replace text)
-bash
-Copy
-Edit
+
 poetry run get-papers-list "AI in medicine" -f ai.csv
 🔍 Example Debug Output
-lua
-Copy
-Edit
+
 Query: covid vaccine
 Output file: output.csv
 Found PubMed IDs: ['40667140', '40667012', '40666529', ...]
