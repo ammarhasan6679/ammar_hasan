@@ -1,0 +1,30 @@
+[project]
+name = "pubmed-project"
+version = "0.1.0"
+description = "CLI to fetch PubMed papers with non-academic authors."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Ammar Hasan", email = "ammarhasan66679@gmail.com" }
+]
+
+# These are your runtime dependencies
+dependencies = [
+    "biopython>=1.85,<2.0.0",
+    "requests>=2.32.4,<3.0.0"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+# Tell Poetry where your package code lives
+[tool.poetry]
+packages = [{ include = "paper_finder" }]
+
+# Expose the CLI command
+[project.scripts]
+get-papers-list = "scripts.cli:main"
+
+
+
